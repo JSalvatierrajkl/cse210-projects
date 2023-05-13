@@ -2,8 +2,10 @@ using System;
 
 class Program
 {
+    
     static void Main(string[] args)
     {
+    
         int inputNumber = -1;
         List<string> prompts = new List<string>() {"Who was the most interesting person I interacted with today?", 
         "What was the best part of my day?", 
@@ -15,7 +17,10 @@ class Program
         "Did you see the hand of God today?", 
         "How did you face the problems?",
         "What could you do better for tomorrow?"};
-        List<Journal> entry= new List<Journal>();
+        string date = "";
+        string prompt = "";
+        string response = "";
+        var entries = new List<string> {"", "", ""};
         
         while (inputNumber != 0)
         {
@@ -39,18 +44,18 @@ class Program
                 entry1._date = theCurrentTime.ToShortDateString();
                 entry1._prompt = (random);
                 entry1._response = Console.ReadLine();
+                date = entry1._date;
+                prompt = entry1._prompt;
                 entry1._entries.Add(entry1);
                 entry1.Display();
-                
             }
+            
             
             else if (inputNumber == 2)
             {
-                Journal myDisplay = new Journal();
-                myDisplay.Display();
-            }
-        }
 
-        
+            }
+
+        }
     }
 }

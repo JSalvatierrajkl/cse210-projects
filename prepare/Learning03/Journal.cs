@@ -5,8 +5,6 @@ public class Journal
     public string _response;
 
     public List<Journal> _entries = new List<Journal>();
-
-    //public List<string> _prompts = new List<Journal>();
     
     public void Display()
     {
